@@ -9,18 +9,23 @@ public class ReynoldsAgent : MonoBehaviour
     public Vector2 avoidance;
     public Vector2 vel;
     public float speed;
+    public bool stunned;
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        
     }
 
     public void MoveToTarget(Transform target)
     {
+        if(!stunned)
+        {
         vel = (target.position - transform.position).normalized;
         vel += avoidance;
         transform.right = vel.normalized;
         rigidbody.velocity = transform.right;
         //avoidance = Vector2.zero;
+        }
     }
 
     public Vector2 AvoidObstacles()
@@ -41,6 +46,19 @@ public class ReynoldsAgent : MonoBehaviour
     {
         avoidance = Vector2.zero;
     }
+    void OnCollisionEnter2D(Collision2D collider)
+    {
+        if(collider.gameObject.GetComponent<DragDrop>() != null && collider.relativeVelocity.magnitude > 2)
+        {
+            stunned = true;
+            Invoke("Stun", 1.0f);
+        }
+    }
+
+    void Stun()
+    {
+        stunned = false;
+    }
 }
 public class Guard : ReynoldsAgent
 {
@@ -49,6 +67,7 @@ public class Guard : ReynoldsAgent
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
         rigidbody = GetComponent<Rigidbody2D>();
+        transform.right =- (player.position - transform.position).normalized;
     }
 
 
@@ -61,4 +80,6 @@ public class Guard : ReynoldsAgent
     {
         Debug.Log("Collider");
     }
+
+
 }

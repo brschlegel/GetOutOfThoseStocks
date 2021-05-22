@@ -11,6 +11,7 @@ public class Player : ReynoldsAgent
     {
         exit = GameObject.FindGameObjectWithTag("Exit").transform;
         rigidbody = GetComponent<Rigidbody2D>();
+        transform.right =- (exit.position - transform.position).normalized;
     }
 
     // Update is called once per frame
