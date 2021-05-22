@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class DragDrop : MonoBehaviour
 {
+    #region Scalars
+    public float frictionCoefficient = -0.05f;
+    public int frameSampleUnit = 5;
+    public float forceMultiplier = 3.5f;
+    #endregion
+
     public GameObject mainCamera;
     public Rigidbody2D rb2D;
 
@@ -11,21 +17,24 @@ public class DragDrop : MonoBehaviour
     private Vector3 offset;
 
     // Variables to hold current and previous mouse coordinates
-    private Vector2 mouseDelta = Vector2.zero;
-    private Vector2 prevMousePos = Vector2.zero;
+    private Vector2 mouseDelta;
+    private Vector2 prevMousePos;
 
-    private int frameCounter = 0;
+    private int frameCounter;
 
     // Start is called before the first frame update
     void Start()
     {
+        mouseDelta = Vector2.zero;
+        prevMousePos = Vector2.zero;
+        frameCounter = 0;
     }
 
-    // Update is called once per frame
-    void Update()
+    // Using FixedUpdate because physics calculations are involved.
+    void FixedUpdate()
     {
         // Apply friction in opposite direction of movement.
-        rb2D.velocity += new Vector2(-0.01f * rb2D.velocity.x, -0.01f * rb2D.velocity.y);
+        rb2D.velocity += new Vector2(frictionCoefficient * rb2D.velocity.x, frictionCoefficient * rb2D.velocity.y);
     }
 
     void OnMouseDown()
@@ -36,12 +45,12 @@ public class DragDrop : MonoBehaviour
 
     void OnMouseDrag()
     {
-        Vector2 cursorPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y/*, screenPoint.z*/);
+        Vector2 cursorPoint = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
         Vector2 cursorPosition = Camera.main.ScreenToWorldPoint(cursorPoint) + offset;
         transform.position = cursorPosition;
-        
+
         // Only sample once every few frames to prevent displacement being calculated as 0.
-        if (++frameCounter % 5 == 0)
+        if (++frameCounter % frameSampleUnit == 0)
         {
             // Update mouse coordinate variables while item is being dragged.
             mouseDelta = new Vector2(Input.mousePosition.x, Input.mousePosition.y) - prevMousePos;
@@ -49,6 +58,8 @@ public class DragDrop : MonoBehaviour
             frameCounter = 0;
         }
 
+        // Disable collisions with other objects while dragging.
+        GetComponent<Collider2D>().enabled = false;
         //Debug.Log(string.Format("mouseDelta: {0}, prevMousePos: {1}", mouseDelta, prevMousePos));
     }
 
@@ -57,7 +68,10 @@ public class DragDrop : MonoBehaviour
         //Debug.Log(string.Format("mouseDelta: {0}", mouseDelta));
         rb2D.velocity = Vector2.zero;
 
-        // Multiply by scalar to amp up overall speed.
-        rb2D.AddForce(mouseDelta * 3);
+        // Multiply by scalar to heighten overall speed.
+        rb2D.AddForce(mouseDelta * forceMultiplier);
+
+        // Object is not being dragged; re-enable collisions with other objects.
+        GetComponent<Collider2D>().enabled = true;
     }
 }
