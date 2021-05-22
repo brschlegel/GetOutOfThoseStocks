@@ -1,10 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     // References to objects that the manager must track in order to handle game states:
+    private int currentLevel;
     public GameObject player;
     public GameObject exit;
     public List<GameObject> guards = new List<GameObject>();
@@ -14,6 +16,7 @@ public class GameManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        currentLevel = 1;
         playerScript = player.GetComponent<Player>();
     }
 
@@ -30,7 +33,9 @@ public class GameManager : MonoBehaviour
         else if (playerScript.exited)
         {
             Debug.Log("exited");
-            // But really load the new level here.
+
+            // Increment and load the next level.
+            SceneManager.LoadSceneAsync(++currentLevel);
         }
     }
 }
