@@ -5,6 +5,7 @@ using UnityEngine;
 public class ReynoldsAgent : MonoBehaviour
 {
     protected Rigidbody2D rigidbody;
+    public float avoidanceScalar = 1;
     public Vector2 avoidance;
     public Vector2 vel;
     public float speed;
