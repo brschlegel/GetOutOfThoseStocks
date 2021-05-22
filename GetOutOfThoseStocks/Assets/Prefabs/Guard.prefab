@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2708756891959428356}
   m_Layer: 0
   m_Name: Guard
-  m_TagString: Untagged
+  m_TagString: Guard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   avoidance: {x: 0, y: 0}
   vel: {x: 0, y: 0}
   speed: 2
+  stunned: 0
 --- !u!50 &2708756891819946256
 Rigidbody2D:
   serializedVersion: 4

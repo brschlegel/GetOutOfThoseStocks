@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Exit
   - Obstacle
+  - Guard
   layers:
   - Default
   - TransparentFX
