@@ -1179,6 +1179,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Guard
       objectReference: {fileID: 0}
+    - target: {fileID: 2708756891819946263, guid: 5b9b6b4a376fdb0488f5c48d05c06596, type: 3}
+      propertyPath: health
+      value: 20
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b9b6b4a376fdb0488f5c48d05c06596, type: 3}
 --- !u!1001 &7711369400442567058
@@ -1188,6 +1192,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3561320495373992407, guid: ce754609f8b77bf4ea98f44aeabe01b2, type: 3}
+      propertyPath: goalBias
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7711369398991115889, guid: ce754609f8b77bf4ea98f44aeabe01b2, type: 3}
       propertyPath: m_RootOrder
       value: 2

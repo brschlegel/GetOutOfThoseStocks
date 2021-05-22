@@ -5,6 +5,7 @@ using UnityEngine;
 public class ObstacleAvoidance : MonoBehaviour
 {
     public Vector2 avoidance;
+    public Transform target;
     void Start()
     {
         
@@ -14,6 +15,11 @@ public class ObstacleAvoidance : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void FixedUpdate()
+    {
+       // transform.right = (target.position - transform.position).normalized;
     }
 
 
