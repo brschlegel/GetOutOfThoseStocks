@@ -101,12 +101,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  blood: {fileID: 0}
   avoidanceScalar: 1
   goalBias: 2
   avoidance: {x: 0, y: 0}
   speed: 0
   stunned: 0
-  turningScalar: 100
+  turningScalar: 125
   exited: 0
   caught: 0
   checkpoint: 0

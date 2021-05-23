@@ -98,7 +98,7 @@ public class Guard : ReynoldsAgent
     {
         if(collider.gameObject.tag == "Obstacle" && collider.relativeVelocity.magnitude > 4)
         {
-            Debug.Log("Called");
+        
             health -=  collider.relativeVelocity.magnitude;
             hb.SetScale(health, maxHealth);
             

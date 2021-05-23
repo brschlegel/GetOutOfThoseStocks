@@ -24,9 +24,10 @@ public class Crossbow : MonoBehaviour
         if (fired)
         {
             Transform t = Instantiate(arrow, transform.position, transform.rotation);
+            t.Rotate(new Vector3(0,0,-90));
             t.rotation = transform.rotation;
             Rigidbody2D r = t.GetComponent<Rigidbody2D>();
-            r.velocity = transform.right * 31;
+            r.velocity = transform.right * 41;
             // r.AddForce( transform.right * 100000);
             fired = false;
             GetComponent<SpriteRenderer>().sprite = unloaded;
