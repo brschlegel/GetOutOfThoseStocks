@@ -346,8 +346,9 @@
 "Assets/Scripts/HealthBar.cs"
 "Assets/Scripts/ObstacleAvoidance.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/PregameMenu.cs"
 "Assets/Scripts/StartMenuScript.cs"
-"Assets/TextGenerator.cs"
+"Assets/Scripts/TextGenerator.cs"
 -langversion:8.0
 
 /deterministic

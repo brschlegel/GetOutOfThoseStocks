@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Game
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -116,10 +116,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 678, y: 492}
+  m_MaxSize: {x: 14001, y: 14042}
   vertical: 0
-  controlID: 61
+  controlID: 63
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 70
+  controlID: 94
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 71
+  controlID: 95
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -271,8 +271,8 @@ MonoBehaviour:
     y: 0
     width: 553
     height: 947
-  m_MinSize: {x: 276, y: 71}
-  m_MaxSize: {x: 4001, y: 4021}
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -384,7 +384,7 @@ MonoBehaviour:
   m_ViewDataDictionary: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 48548
+  m_LastSelectedObjectID: -15870
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -421,9 +421,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 536.0048, y: 220.96823, z: -39.131603}
+    m_Target: {x: 480, y: 259.5, z: 0}
     speed: 2
-    m_Value: {x: 536.0048, y: 220.96823, z: -39.131603}
+    m_Value: {x: 480, y: 259.5, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -474,9 +474,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 359.434
+    m_Target: 545.6558
     speed: 2
-    m_Value: 359.434
+    m_Value: 545.6558
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -529,25 +529,25 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: d8570000
+      m_SelectedIDs: 4c570000
       m_LastClickedID: 0
-      m_ExpandedIDs: 3264ffff8e67ffffbc67ffff5a6bffff906bffff9c6cffffb66fffff9a70ffff9071ffff0e74fffff282ffff6e84ffff3685ffff8e86ffff8087ffff3888ffffe288ffff9c89ffff5a8affffc093ffff4c95ffffa696ffff6497ffff3898ffffa09bffff3c9dffff689dffffc2a5ffff1ec3ffff9cc4ffff5cc7ffffaac8ffffb2caffff9ecbffff72d1ffffd6d2ffffccdfffff96e3ffff42e4ffffc8e5fffff4eaffffaaebffffdeebffff02edffff14efffff16f0ffff4af1ffff40f5ffffdcf5ffff44f7ffff3cf8ffff9ef8ffff46f9ffff3cfbffffe65700003a58000062590000e25a0000645b00005a7600006c760000a47e0000d2a100003cb90000a4bd0000f4be0000
+      m_ExpandedIDs: 32a2ffffbcb6ffff86b8ffff96baffff8ec0ffff82c2ffff64c4ffff3cc5ffff48c6ffffb0c6fffff0caffff28d0ffffe2d0ffff70d5ffff32d6ffff98d6ffff9ce5ffffb6e6ffff3ce8ffff4ee9ffff2cebffff24ecffffa4eeffff64efffff22f0ffffcef0ffff36f1ffff6af1ffff98f1ffffc6f1ffff12f2fffff6f2ffffecf3ffff76f6ffff64f7ffff28f8ffffecf8ffff70faffff2efbffff42740000cc740000ba750000de750000b2810000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: RestockButton
-        m_OriginalName: RestockButton
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 48920
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 8}
+        m_ClientGUIView: {fileID: 0}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -682,22 +682,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes/Menus
+    - Assets/Scenes/Levels
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 96
   m_LastFolders:
-  - Assets/Scenes/Menus
-  m_LastFoldersGridSize: -1
+  - Assets/Scenes/Levels
+  m_LastFoldersGridSize: 96
   m_LastProjectPath: C:\Users\Kidd\Desktop\GetOutOfThoseStocks\GetOutOfThoseStocks
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d2570000
-    m_LastClickedID: 22482
-    m_ExpandedIDs: 00000000be560000ca560000cc56000000ca9a3b
+    m_SelectedIDs: 4c560000
+    m_LastClickedID: 22092
+    m_ExpandedIDs: 000000003a5600003c5600003e56000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -725,7 +725,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000be560000
+    m_ExpandedIDs: 000000003a5600003c5600003e560000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -778,7 +778,7 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
+    m_GridSize: 96
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
 --- !u!114 &18

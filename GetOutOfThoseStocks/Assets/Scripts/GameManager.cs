@@ -7,8 +7,13 @@ using UnityEngine.UI;               //< UI Text
 public class GameManager : MonoBehaviour
 {
     // References to objects that the manager must track in order to handle gameplay and states:
-    public int CurrentLevel { get; private set; }
     private float timeScale;
+
+    // Static variable to be accessed in other classes that require scene info i.e. StartMenuScript.
+    //public static int PregameScreen = 1;
+
+    public int CurrentLevel { get; private set; }
+
     public GameObject player;
     public GameObject exit;
     public Text gameOverText;
@@ -52,9 +57,13 @@ public class GameManager : MonoBehaviour
         // These are mutually exclusive - use elif.
         else if (playerScript.exited)
         {
-            // Reset flags, then increment and load the next level.
+            // Reset flags, then increment and display a pregame screen.
             playerScript.ResetFlags();
-            SceneManager.LoadSceneAsync(++CurrentLevel);
+
+            if (++CurrentLevel >= SceneManager.sceneCount)
+                SceneManager.LoadSceneAsync(0); // Placeholder back to title
+
+            SceneManager.LoadSceneAsync(CurrentLevel);
         }
     }
 

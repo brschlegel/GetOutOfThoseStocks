@@ -8,7 +8,6 @@ public class StartMenuScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -20,7 +19,13 @@ public class StartMenuScript : MonoBehaviour
     public void Run()
     {
         // Pregame screen
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
+    }
+
+    public void NextLevel()
+    {
+        // Level 0
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void End()
