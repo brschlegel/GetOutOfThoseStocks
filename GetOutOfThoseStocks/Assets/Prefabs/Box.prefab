@@ -121,7 +121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frictionCoefficient: -0.05
   frameSampleUnit: 5
-  forceMultiplier: 200
+  forceMultiplier: 100
   mainCamera: {fileID: 0}
   rb2D: {fileID: 959621474656569968}
 --- !u!61 &959621474656569981
