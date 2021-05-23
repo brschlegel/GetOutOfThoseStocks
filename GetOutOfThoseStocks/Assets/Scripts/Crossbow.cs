@@ -6,6 +6,8 @@ public class Crossbow : MonoBehaviour
 {
     public Transform arrow;
     public bool fired;
+
+    public Sprite unloaded;
     void Start()
     {
         fired = true;
@@ -21,11 +23,13 @@ public class Crossbow : MonoBehaviour
     {
         if(fired)
         {
-        Transform t = Instantiate(arrow, transform.position, Quaternion.identity);
+        Transform t = Instantiate(arrow, transform.position, transform.rotation);
+        t.rotation = transform.rotation;
         Rigidbody2D r = t.GetComponent<Rigidbody2D>();
         r.velocity =  transform.right * 31;
         // r.AddForce( transform.right * 100000);
         fired = false;
+        GetComponent<SpriteRenderer>().sprite = unloaded;
         }
     }
 }
