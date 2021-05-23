@@ -91,10 +91,10 @@ public class Guard : ReynoldsAgent
 
         void OnCollisionEnter2D(Collision2D collider)
     {
-        if(collider.gameObject.tag == "Obstacle" && collider.rigidbody.velocity.magnitude > 4)
+        if(collider.gameObject.tag == "Obstacle" && collider.relativeVelocity.magnitude > 4)
         {
             Debug.Log("Called");
-            health -=  collider.rigidbody.velocity.magnitude;
+            health -=  collider.relativeVelocity.magnitude;
             hb.SetScale(health, maxHealth);
         }
     }
