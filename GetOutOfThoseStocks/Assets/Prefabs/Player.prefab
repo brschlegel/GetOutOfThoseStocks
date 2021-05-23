@@ -107,7 +107,7 @@ MonoBehaviour:
   avoidance: {x: 0, y: 0}
   speed: 0
   stunned: 0
-  turningScalar: 125
+  turningScalar: 200
   exited: 0
   caught: 0
   checkpoint: 0
