@@ -9,18 +9,30 @@ public class Player : ReynoldsAgent
     public bool caught;
     Transform exit;
 
+    public int checkpoint;
+
+    Transform checkpoints;
+
     void Start()
     {
         exited = caught = false;
         exit = GameObject.FindGameObjectWithTag("Exit").transform;
         rigidbody = GetComponent<Rigidbody2D>();
         transform.right =- (exit.position - transform.position).normalized;
+        checkpoint = 0;
+        checkpoints = GameObject.Find("Checkpoints").transform;
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        MoveToTarget(exit);
+        MoveToTarget(checkpoints.GetChild(checkpoint));
+        if(Vector2.Distance(checkpoints.GetChild(checkpoint).position, transform.position) < .5f)
+        {
+            checkpoint++;
+        }
+         rigidbody.velocity = rigidbody.velocity.normalized * speed;
     }
 
     // @return boolean T/F based on whether the level is completed.
