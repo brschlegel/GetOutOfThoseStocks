@@ -238,11 +238,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1668126233822645058, guid: 2bb4f0a80b4ec4343b065d19a80e15f4, type: 3}
       propertyPath: m_LocalScale.y
-      value: 25.95
+      value: 25.75797
       objectReference: {fileID: 0}
     - target: {fileID: 1668126233822645058, guid: 2bb4f0a80b4ec4343b065d19a80e15f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.9756
+      value: 3.071
       objectReference: {fileID: 0}
     - target: {fileID: 1668126233822645058, guid: 2bb4f0a80b4ec4343b065d19a80e15f4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1214,8 +1214,8 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.85
-    height: 0.96
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
