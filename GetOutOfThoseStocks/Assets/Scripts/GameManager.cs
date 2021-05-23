@@ -69,11 +69,14 @@ public class GameManager : MonoBehaviour
         {
             // Reset flags, then increment and display a pregame screen.
             playerScript.ResetFlags();
+            SceneManager.LoadSceneAsync(++CurrentLevel);
 
-            if (++CurrentLevel >= SceneManager.sceneCount)
-                SceneManager.LoadSceneAsync(0); // Placeholder back to title
+            //if (CurrentLevel < SceneManager.sceneCount)
+            //    SceneManager.LoadSceneAsync(CurrentLevel);
+            //else
+            //    // Endgame screen
+            //    SceneManager.LoadSceneAsync("End");
 
-            SceneManager.LoadSceneAsync(CurrentLevel);
         }
     }
 

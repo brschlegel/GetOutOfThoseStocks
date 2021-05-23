@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0375f0335b7746448c14fc02188fef4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pregameCanvas: {fileID: 0}
   player: {fileID: 0}
   exit: {fileID: 0}
+  gameOverText: {fileID: 0}
   guards: []

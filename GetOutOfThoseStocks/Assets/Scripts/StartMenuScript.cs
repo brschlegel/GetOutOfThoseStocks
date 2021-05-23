@@ -19,13 +19,19 @@ public class StartMenuScript : MonoBehaviour
     public void Run()
     {
         // Pregame screen
-        SceneManager.LoadSceneAsync(1);
+        SceneManager.LoadSceneAsync("Level 0");
     }
 
-    public void NextLevel()
+    //public void NextLevel()
+    //{
+    //    // Level 0
+    //    SceneManager.LoadSceneAsync(1);
+    //}
+
+    public void BackToMain()
     {
-        // Level 0
-        SceneManager.LoadSceneAsync(1);
+        // Main Menu
+        SceneManager.LoadSceneAsync("Start");
     }
 
     public void End()
