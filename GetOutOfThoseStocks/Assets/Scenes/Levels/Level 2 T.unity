@@ -1212,11 +1212,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4817054494930713984, guid: 088e1eb9fd4e72f4c90f2da03a9b7e2a, type: 3}
       propertyPath: m_Text
-      value: Click crossbows to shoot arrows!
+      value: Click crossbows to shooteth arrows!
       objectReference: {fileID: 0}
     - target: {fileID: 4817054494930713987, guid: 088e1eb9fd4e72f4c90f2da03a9b7e2a, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -151
+      value: -168
       objectReference: {fileID: 0}
     - target: {fileID: 4817054494930713987, guid: 088e1eb9fd4e72f4c90f2da03a9b7e2a, type: 3}
       propertyPath: m_AnchoredPosition.y

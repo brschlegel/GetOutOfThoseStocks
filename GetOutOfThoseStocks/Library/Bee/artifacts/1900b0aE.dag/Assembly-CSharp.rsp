@@ -348,6 +348,7 @@
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/PregameMenu.cs"
 "Assets/Scripts/StartMenuScript.cs"
+"Assets/Scripts/TextController.cs"
 "Assets/Scripts/TextGenerator.cs"
 -langversion:8.0
 
