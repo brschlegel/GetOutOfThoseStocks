@@ -5,6 +5,8 @@ using UnityEngine;
 public class ReynoldsAgent : MonoBehaviour
 {
     public Rigidbody2D rigidbody;
+
+    public Transform blood;
     public float avoidanceScalar = 1;
     public float goalBias;
     public Vector2 avoidance;
@@ -86,7 +88,10 @@ public class Guard : ReynoldsAgent
        
     
         if(health <= 0)
+        {
             Die();
+            Transform b = Instantiate(blood, transform.position, Quaternion.identity);
+        }
     }
 
         void OnCollisionEnter2D(Collision2D collider)
@@ -96,6 +101,7 @@ public class Guard : ReynoldsAgent
             Debug.Log("Called");
             health -=  collider.relativeVelocity.magnitude;
             hb.SetScale(health, maxHealth);
+            
         }
     }
     public void Die()

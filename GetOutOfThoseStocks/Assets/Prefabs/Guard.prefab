@@ -101,6 +101,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 0}
+  blood: {fileID: 2358007221504437396, guid: 046329b3aeecaa74aa9ef49a322d34aa, type: 3}
   avoidanceScalar: 1
   goalBias: 2
   avoidance: {x: 0, y: 0}
