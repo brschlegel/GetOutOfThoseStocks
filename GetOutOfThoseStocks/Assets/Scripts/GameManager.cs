@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
 
     public int CurrentLevel { get; private set; }
 
+    public GameObject pregameCanvas;
     public GameObject player;
     public GameObject exit;
     public Text gameOverText;
@@ -37,6 +38,15 @@ public class GameManager : MonoBehaviour
     /// @pre if Time.timeScale == 0 FixedUpdate() is NOT called - pausing/unpausing handled here.
     private void Update()
     {
+        if (pregameCanvas.activeInHierarchy)
+            Time.timeScale = 0;
+
+        if (Input.GetMouseButtonDown(0) && pregameCanvas.activeInHierarchy)
+        {
+            pregameCanvas.SetActive(false);
+            Time.timeScale = 1;
+        }
+        
         // Check for win/lose conditions:
         if (playerScript.caught)
         {
@@ -45,7 +55,7 @@ public class GameManager : MonoBehaviour
             gameOverText.gameObject.SetActive(true);
 
             // Upon press of R, unfreeze game, reset player boolean flags and reload level.
-            if (playerScript.caught && Input.GetKeyDown(KeyCode.R))
+            if (playerScript.caught && Input.GetMouseButtonDown(0))
             {
                 playerScript.ResetFlags();
                 Time.timeScale = 1;
