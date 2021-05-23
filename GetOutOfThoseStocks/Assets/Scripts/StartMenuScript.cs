@@ -19,7 +19,7 @@ public class StartMenuScript : MonoBehaviour
 
     public void Run()
     {
-        // Pregame screen 1
+        // Pregame screen
         SceneManager.LoadSceneAsync(0);
     }
 

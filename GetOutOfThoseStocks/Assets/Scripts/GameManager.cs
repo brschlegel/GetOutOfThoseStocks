@@ -7,7 +7,7 @@ using UnityEngine.UI;               //< UI Text
 public class GameManager : MonoBehaviour
 {
     // References to objects that the manager must track in order to handle gameplay and states:
-    private int currentLevel;
+    public int CurrentLevel { get; private set; }
     private float timeScale;
     public GameObject player;
     public GameObject exit;
@@ -23,7 +23,7 @@ public class GameManager : MonoBehaviour
         gameOverText.gameObject.SetActive(false);
 
         // currentLevel must follow build indexing, and cannot be hard-coded.
-        currentLevel = SceneManager.GetActiveScene().buildIndex;
+        CurrentLevel = SceneManager.GetActiveScene().buildIndex;
 
         playerScript = player.GetComponent<Player>();
     }
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
                 Time.timeScale = 1;
 
                 // Do not increment and, instead, reload the current level.
-                SceneManager.LoadSceneAsync(currentLevel);
+                SceneManager.LoadSceneAsync(CurrentLevel);
             }
         }
         // These are mutually exclusive - use elif.
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour
         {
             // Reset flags, then increment and load the next level.
             playerScript.ResetFlags();
-            SceneManager.LoadSceneAsync(++currentLevel);
+            SceneManager.LoadSceneAsync(++CurrentLevel);
         }
     }
 

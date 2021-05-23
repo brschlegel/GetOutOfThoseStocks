@@ -347,6 +347,7 @@
 "Assets/Scripts/ObstacleAvoidance.cs"
 "Assets/Scripts/Player.cs"
 "Assets/Scripts/StartMenuScript.cs"
+"Assets/TextGenerator.cs"
 -langversion:8.0
 
 /deterministic
