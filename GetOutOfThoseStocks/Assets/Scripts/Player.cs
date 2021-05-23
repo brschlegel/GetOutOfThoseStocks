@@ -15,7 +15,7 @@ public class Player : ReynoldsAgent
 
     void Start()
     {
-        exited = caught = false;
+        ResetFlags();
         exit = GameObject.FindGameObjectWithTag("Exit").transform;
         rigidbody = GetComponent<Rigidbody2D>();
         transform.right =- (exit.position - transform.position).normalized;
@@ -35,7 +35,7 @@ public class Player : ReynoldsAgent
          rigidbody.velocity = rigidbody.velocity.normalized * speed;
     }
 
-    // @return boolean T/F based on whether the level is completed.
+    /// @return boolean T/F based on whether the level is completed.
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Exit")
@@ -43,5 +43,11 @@ public class Player : ReynoldsAgent
 
         if (collision.gameObject.tag == "Guard")
             caught = true;
+    }
+
+    /// Resets boolean flags.
+    public void ResetFlags()
+    {
+        exited = caught = false;
     }
 }
