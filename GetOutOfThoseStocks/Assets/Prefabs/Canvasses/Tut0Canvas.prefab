@@ -34,8 +34,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 124}
-  m_SizeDelta: {x: 960, y: 43.45}
+  m_AnchoredPosition: {x: 0, y: 131}
+  m_SizeDelta: {x: 960, y: 85.1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4817054494930713985
 CanvasRenderer:
@@ -78,7 +78,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Click and drageth, i sayeth! giveth that gent the key
+  m_Text: 'Click and drageth, i sayeth! giveth that
+
+    gent the key to those stocks'
 --- !u!1 &4817054495340398823
 GameObject:
   m_ObjectHideFlags: 0
