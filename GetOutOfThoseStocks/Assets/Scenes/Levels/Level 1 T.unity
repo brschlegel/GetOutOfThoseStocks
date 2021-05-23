@@ -262,6 +262,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4817054494930713984, guid: 415b800db3d33a9459930c790e0cfc4d, type: 3}
+      propertyPath: m_Text
+      value: Click and throw crates to stop those pesky guards!
+      objectReference: {fileID: 0}
     - target: {fileID: 4817054495340398823, guid: 415b800db3d33a9459930c790e0cfc4d, type: 3}
       propertyPath: m_Name
       value: Tut1Canvas

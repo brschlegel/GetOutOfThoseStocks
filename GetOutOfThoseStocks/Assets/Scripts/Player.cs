@@ -43,6 +43,8 @@ public class Player : ReynoldsAgent
 
         if (collision.gameObject.tag == "Guard")
             caught = true;
+        if (collision.gameObject.tag == "Key")
+            stunned = false;
     }
 
     /// Resets boolean flags.
