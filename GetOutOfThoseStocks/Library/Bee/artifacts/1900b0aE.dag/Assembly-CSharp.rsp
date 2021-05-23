@@ -346,6 +346,7 @@
 "Assets/Scripts/HealthBar.cs"
 "Assets/Scripts/ObstacleAvoidance.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/StartMenuScript.cs"
 -langversion:8.0
 
 /deterministic

@@ -16,20 +16,20 @@ public class Crossbow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnMouseDown()
     {
-        if(fired)
+        if (fired)
         {
-        Transform t = Instantiate(arrow, transform.position, transform.rotation);
-        t.rotation = transform.rotation;
-        Rigidbody2D r = t.GetComponent<Rigidbody2D>();
-        r.velocity =  transform.right * 31;
-        // r.AddForce( transform.right * 100000);
-        fired = false;
-        GetComponent<SpriteRenderer>().sprite = unloaded;
+            Transform t = Instantiate(arrow, transform.position, transform.rotation);
+            t.rotation = transform.rotation;
+            Rigidbody2D r = t.GetComponent<Rigidbody2D>();
+            r.velocity = transform.right * 31;
+            // r.AddForce( transform.right * 100000);
+            fired = false;
+            GetComponent<SpriteRenderer>().sprite = unloaded;
         }
     }
 }
