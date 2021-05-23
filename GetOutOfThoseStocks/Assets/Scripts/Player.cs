@@ -32,7 +32,7 @@ public class Player : ReynoldsAgent
         {
             checkpoint++;
         }
-         rigidbody.velocity = rigidbody.velocity.normalized * speed;
+        rigidbody.velocity = rigidbody.velocity.normalized * speed;
     }
 
     /// @return boolean T/F based on whether the level is completed.
