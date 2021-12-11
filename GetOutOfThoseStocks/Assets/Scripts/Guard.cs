@@ -64,6 +64,7 @@ public class Guard : ReynoldsAgent
 {
     public float health = 10;
     public float maxHealth;
+    public bool locked = false;
 
     public ObstacleAvoidance ob;
     public HealthBar hb;
@@ -81,7 +82,7 @@ public class Guard : ReynoldsAgent
 
     void FixedUpdate()
     {
-        if(player.checkpoint >= checkpoint)
+        if(player.checkpoint >= checkpoint && !locked)
         {
              MoveToTarget(player.transform);
         }
@@ -101,12 +102,13 @@ public class Guard : ReynoldsAgent
         
             health -=  collider.relativeVelocity.magnitude * 2;
             hb.SetScale(health, maxHealth);
-            
+
         }
     }
     public void Die()
     {
         Destroy(gameObject);
+        GameObject.Find("GameManager").GetComponent<GameManager>().guards.Remove(this);
     }
 
 

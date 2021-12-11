@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class DragDrop : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class DragDrop : MonoBehaviour
 
     public GameObject mainCamera;
     public Rigidbody2D rb2D;
-
+    public UnityEvent releaseEvent;
     //private Vector3 screenPoint;
     private Vector3 offset;
 
@@ -73,5 +74,6 @@ public class DragDrop : MonoBehaviour
 
         // Object is not being dragged; re-enable collisions with other objects.
         GetComponent<Collider2D>().enabled = true;
+        releaseEvent.Invoke();  
     }
 }

@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour
     public GameObject player;
     public GameObject exit;
     public Text gameOverText;
-    public List<GameObject> guards = new List<GameObject>();
+    public List<Guard> guards = new List<Guard>();
 
     private Player playerScript;
     
